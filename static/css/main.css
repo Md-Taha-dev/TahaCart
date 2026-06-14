@@ -431,6 +431,15 @@ color: #ff6b00;
     
     width: 90%;
 }
+ .account-toggle {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: grey;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0;
+}
 
 @media (max-width: 1024px) {
 
