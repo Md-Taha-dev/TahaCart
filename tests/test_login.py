@@ -1,4 +1,4 @@
-import os
+import os,time
 from dotenv import load_dotenv
 
 from selenium import webdriver
@@ -36,17 +36,20 @@ def test_valid_login():
         By.ID,
         "username"
     ).send_keys(USERNAME)
+    time.sleep(2)
 
 
     driver.find_element(
         By.ID,
         "password"
     ).send_keys(PASSWORD)
+    time.sleep(2)
 
     driver.find_element(
         By.CSS_SELECTOR,
         "button[type='submit']"
     ).click()
+    time.sleep(2)
 
     
     assert "/login" not in driver.current_url
@@ -64,16 +67,19 @@ def test_invalid_login():
         By.ID,
         "username"
     ).send_keys("fakeuser123")
+    time.sleep(2)
 
     driver.find_element(
         By.ID,
         "password"
     ).send_keys("wrongpassword123")
+    time.sleep(2)
     
     driver.find_element(
         By.CSS_SELECTOR,
         "button[type='submit']"
     ).click()
+    time.sleep(2)
 
  
     assert "/login" in driver.current_url
