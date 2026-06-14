@@ -1,4 +1,4 @@
-# ShopNest E-Commerce Web Application
+# TahaCart E-Commerce Web Application
 
 A robust full-stack e-commerce platform built using Python, Flask, and a relational MySQL backend database. 
 
