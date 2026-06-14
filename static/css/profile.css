@@ -12,31 +12,38 @@
 }
 
 .profile-container{
-    display: flex;
+   display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .welcome-heading{
-    margin-top: 40px;
+   margin-top: 40px;
     color: white;
-    margin-left: 50px;
     font-size: 50px;
 }
 
 .user-details{
-    background-color: white;
+   background-color: white;
     display: flex;
     flex-direction: column;
+
     margin-top: 50px;
-    margin-left: 50px;
     margin-bottom: 50px;
-    width: 540px;
+
+    width: 100%;
+    max-width: 540px;
+
     border-radius: 10px;
-    height: 140px;
+    min-height: 140px;
+
     justify-content: center;
     gap: 8px;
-    padding-left: 15px;
+
+    padding: 15px;
 }
 
 .user-details h2{
@@ -45,4 +52,41 @@
 
 .user-details p{
     font-size: 18px;
+}
+
+@media (max-width: 768px) {
+
+    .welcome-heading{
+        font-size: 36px;
+    }
+
+    .user-details{
+        max-width: 100%;
+    }
+
+    .user-details h2{
+        font-size: 24px;
+    }
+
+    .user-details p{
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .welcome-heading{
+        font-size: 28px;
+    }
+
+    .user-details h2{
+        font-size: 20px;
+    }
+
+    .user-details p{
+        font-size: 14px;
+        word-break: break-word;
+    }
+
 }

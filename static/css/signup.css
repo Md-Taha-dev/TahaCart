@@ -31,10 +31,11 @@ body::after {
 }
 
 .login-form {
-width: 450px;
+width: 90%;
+    max-width: 450px;
   padding: 20px;
   border-radius: 10px;
-  height: 700px;
+  min-height: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,6 +90,7 @@ width: 450px;
   width: 80%;
   padding: 12px;
   margin-top: 10px;
+  
   margin-bottom: 15px;
 
   border: none;
@@ -111,4 +113,28 @@ width: 450px;
   background: white;
   color: black;
   transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+
+    .login-form {
+        padding: 15px;
+    }
+
+    .login-form p {
+        font-size: 28px;
+    }
+
+    .login-form form label {
+        font-size: 16px;
+    }
+
+    .login-form form input {
+        width: 90%;
+    }
+
+    .btn-login-form {
+        width: 90%;
+    }
+
 }

@@ -1,6 +1,7 @@
 .product-search-card{
-    background-color: white;
-    width: 1200px;
+      background-color: white;
+    width: 95%;
+    max-width: 1200px;
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -10,9 +11,10 @@
 }
 
 .price-button{
-    display: flex;
+   display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap:440px;
+    width: 90%;
 }
 
 .price-button p{
@@ -46,4 +48,44 @@
 .footer a{
   
     color: white;
+}
+
+.products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px){
+
+    .product-search-card{
+        width: 95%;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .prod-img{
+        width: 180px;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    .price-button{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #prod-name{
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    #prod-stock{
+        text-align: center;
+    }
+
 }
