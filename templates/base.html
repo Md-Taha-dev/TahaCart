@@ -81,5 +81,12 @@
 
 {% block content %}
 {% endblock %}
+<script>
+  const dropdown = document.querySelector(".account-dropdown");
+
+  dropdown.addEventListener("click", function (e) {
+    this.classList.toggle("active");
+  });
+</script>
 </body>
 </html>
