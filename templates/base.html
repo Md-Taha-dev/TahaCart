@@ -44,7 +44,7 @@
     <a href="">Wishlist</a>
     <img src="{{url_for('static',filename='images/wishlist.png')}}" alt="">
     <div class="account-dropdown">
-  <a href="">Account ▾</a>
+  <button type="button" class="account-toggle">Account ▾</button>
 
   {% if current_user.is_authenticated %}
 <div class="dropdown-menu">
@@ -82,10 +82,18 @@
 {% block content %}
 {% endblock %}
 <script>
-  const dropdown = document.querySelector(".account-dropdown");
+  const account = document.querySelector(".account-dropdown");
+  const toggle = document.querySelector(".account-toggle");
 
-  dropdown.addEventListener("click", function (e) {
-    this.classList.toggle("active");
+  toggle.addEventListener("click", (e) => {
+    e.preventDefault();
+    account.classList.toggle("active");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!account.contains(e.target)) {
+      account.classList.remove("active");
+    }
   });
 </script>
 </body>
